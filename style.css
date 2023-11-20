@@ -19,6 +19,10 @@ a{
     font-family: sans-serif;
 }
 
+section {
+    margin-bottom: 36px;
+}
+
 a:hover{
     background-color: rgba(0, 0, 0, .05);
 }
@@ -192,6 +196,40 @@ a:hover{
         color: #7c00ce;
         font-size: 1.5rem;
         font-weight: bold;
-        padding: 12px 0;
     }
+}
+.services{
+    background: rgba(70, 0, 116, 0.981);
+    color: rgba(255, 255, 255);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.services h2{
+    padding-top: 26px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.services img{
+    padding: 6px;
+    width: 100vw;
+}
+
+.services p{
+    padding: 6px 20px;
+    font-size: 1.2rem;
+}
+
+.services div:not(:first-child){
+    padding: 32px 0;
+}
+
+.services .divisor{
+    display: block;
+    height: 1px;
+    width: 90vw;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    filter: blur(1px);
 }
