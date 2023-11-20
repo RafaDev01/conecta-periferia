@@ -6,6 +6,7 @@
     font-size: 100%;
     font-weight: normal;
     vertical-align: baseline;
+    font-family: sans-serif;
 }
 
 html{
@@ -49,6 +50,33 @@ a:hover{
 
 #btn-mobile{
     display: none;
+}
+
+.apresentation{
+    color: white;
+    height: 300px;
+    background-image: url(assets/img/redes.webp);
+    background-position: right;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.apresentation div{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.apresentation h2{
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.apresentation h3{
+    font-weight: bold;
+    font-size: 1.7rem;
 }
 
 @media(max-width: 600px){
@@ -120,5 +148,23 @@ a:hover{
     #nav.active #hamburguer::after{
         transform: rotate(-135deg);
         top: -7px;
+    }
+
+    .apresentation{
+        height: 250px;
+    }
+
+    .apresentation div{
+        padding: 16px;
+    }
+    
+    .apresentation h2{
+        font-size: 1.6rem;
+        font-weight: bolder;
+    }
+    
+    .apresentation h3{
+        font-weight: bold;
+        font-size: 1.2rem;
     }
 }
