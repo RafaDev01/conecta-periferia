@@ -19,14 +19,6 @@ a{
     font-family: sans-serif;
 }
 
-section {
-    margin-bottom: 36px;
-}
-
-a:hover{
-    background-color: rgba(0, 0, 0, .05);
-}
-
 #logo{
     font-size: 1.5rem;
     font-weight: bold;
@@ -81,6 +73,7 @@ a:hover{
 .apresentation h3{
     font-weight: bold;
     font-size: 1.7rem;
+    padding: 2px 0;
 }
 
 @media(max-width: 600px){
@@ -198,6 +191,7 @@ a:hover{
         font-weight: bold;
     }
 }
+
 .services{
     background: rgba(70, 0, 116, 0.981);
     color: rgba(255, 255, 255);
@@ -232,4 +226,104 @@ a:hover{
     width: 90vw;
     border-bottom: 2px solid rgb(255, 255, 255);
     filter: blur(1px);
+}
+
+.contact-box-1 h2{
+    color: #7c00ce;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 26px;
+}
+
+.contact-box-1{
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.contact-box-1 div:first-child{
+    padding: 20px;
+}
+
+.contact-box-1 div:last-child {
+    padding: 20px;
+    text-align: left;
+}
+
+.contact-box-1 a{
+    text-decoration: none;
+}
+
+.mapa{
+    margin-top: 5px;
+    width: 90vw;
+    height: 50vh;
+}
+
+.icon-social-media{
+    width: 40px;
+}
+
+.location-text{
+    color: #7c00ce;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+}
+
+form label{
+    color: #7c00ce;
+    font-weight: bold;
+}
+
+form input {
+    padding: 2px;
+    height: 30px;
+    margin-bottom: 16px;
+    border: 1px solid #7c00ce;
+}
+
+input:focus {
+    border: 3px solid #7c00ce;
+    outline: none;
+}
+
+form textarea{
+    border: 1px solid #7c00ce;
+    margin-bottom: 3px;
+    box-sizing: border-box; 
+    padding: 2px;
+    height: 100px;
+}
+
+form textarea:focus{
+    border: 3px solid #7c00ce;
+    outline: none;
+    box-sizing: border-box; 
+}
+
+form button{
+    height: 50px;
+    color: white;
+    background-color: #651b97;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form button:hover{
+    background-color: #7c00ce;
+}
+
+footer{
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgb(6, 6, 6);
+    height: 6vh;
 }
