@@ -1,9 +1,7 @@
-/*
 setTimeout(()=>{
-    alert("Testando se o script ta funcionando...")
-    alert("Comecarei pela versão mobile ok, precisará ser acessado pelo celular para melhor experiência até eu tirar esse alerta.")
+    alert("Estou finalizando a versão de celular, a vercel de computador ainda não está pronta")
 },2000)
-*/
+
 
 const header = document.querySelector("#header")
 const btnMobile = document.querySelector('#btn-mobile')
