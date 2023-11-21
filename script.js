@@ -1,5 +1,5 @@
 setTimeout(()=>{
-    alert("Estou finalizando a versão de celular, a vercel de computador ainda não está pronta")
+    alert("Estou finalizando a versão de celular, a versão de computador ainda não está pronta")
 },2000)
 
 
