@@ -15,16 +15,16 @@
                 <span id="hamburguer"></span>
             </button>
             <ul id="menu">
-                <li><a href="/">topico 1</a></li>
-                <li><a href="/">topico 2</a></li>
-                <li><a href="/">topico 3</a></li>
-                <li><a href="/">topico 4</a></li>
+                <li><a class="link-menu" href="#inicio">Início</a></li>
+                <li><a class="link-menu" href="#sobre">Sobre</a></li>
+                <li><a class="link-menu" href="#servicos">Serviços</a></li>
+                <li><a class="link-menu" href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="apresentation">
+        <section id="inicio" class="apresentation">
             <div>
                 <h2>SOMOS ESPECIALISTAS</h2>
             </div>
@@ -40,17 +40,17 @@
         </section>
     </main>
 
-        <section class="about">
+        <section id="sobre" class="about">
             <div class="about-text">
                 <h2>Sobre nós</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum cupiditate ut possimus at fugiat rem similique quam assumenda ab fugit, nihil repudiandae quasi molestias nobis dolorum praesentium architecto facere? Temporibus!</p>
+                <p>&emsp;&emsp;A Conecta Periferia é uma inovadora empresa de Tecnologia da Informação (TI) que nasceu na periferia, comprometida em oferecer soluções excepcionais em hardware, software e redes. Nossa missão é capacitar clientes por meio da tecnologia, impulsionando o crescimento e a transformação digital. Inspirados por nossas raízes, buscamos não apenas fornecer serviços de alta qualidade, mas também contribuir ativamente para o desenvolvimento e fortalecimento das comunidades em que atuamos.</p>
             </div>
             <div class="about-img">
                 <img src="assets/img/about.webp" alt="simulação de equipe trabalhando">
             </div>
         </section>
 
-        <section class="services">
+        <section id="servicos" class="services">
             <div>
                 <h2>Nossos serviços</h2>
             </div>
@@ -89,7 +89,7 @@
 
         </section>
 
-        <section class="contact">
+        <section id="contato" class="contact">
             <div class="contact-box-1">
                 <div>
                     <h2>Contato</h2>
@@ -109,19 +109,19 @@
             <div class="contact-box-2">
                 <form action="/seu-endereco-de-envio" method="post">
                     <label for="nome">Nome completo:</label>
-                    <input type="text" id="nome" name="campo1">
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
                 
                     <label for="empresa">Empresa:</label>
-                    <input type="text" id="empresa" name="email">
+                    <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
 
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="campo3">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
                 
                     <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone">
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX)XXXX-XXXX" required>
 
                     <label for="mensagem">Mensagem:</label>
-                    <textarea type="text" id="mensagem" name="mensagem" rows="4" cols="60"></textarea>
+                    <textarea type="text" id="mensagem" name="mensagem" rows="4" cols="60" placeholder="Digite a mensagem" required></textarea>
                     <br>
                     <button type="submit">Enviar</button>
                 </form>
