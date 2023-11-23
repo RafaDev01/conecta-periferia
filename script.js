@@ -1,6 +1,6 @@
-setTimeout(()=>{
+/*setTimeout(()=>{
     alert("Estou finalizando a versão de celular, a versão de computador ainda não está pronta")
-},2000)
+},2000)*/
 
 
 const header = document.querySelector("#header")
