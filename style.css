@@ -106,6 +106,7 @@ a{
 }
 
 .about{
+    text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,6 +115,7 @@ a{
 
 .about img{
     width: calc(100vw - 20px);
+    max-width: 500px;
 }
 
 .about-text{
@@ -129,7 +131,7 @@ a{
 
 .about h2{
     padding: 20px 0;
-    color: #7c00ce;
+    color: #7C00EB;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -208,6 +210,10 @@ a{
     }
 }
 
+.work-description{
+    padding: 0px 0px 16px 0px ;
+}
+
 .services{
     background: rgba(70, 0, 116, 0.981);
     color: rgba(255, 255, 255);
@@ -217,14 +223,16 @@ a{
 }
 
 .services h2{
-    padding-top: 26px;
+    padding: 26px;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .services img{
     padding: 6px;
-    width: calc(100vw - 20px);
+    width: calc(90vw - 20px);
+    max-width: 750px;
+    border-radius: 8px;
 }
 
 .services p{
@@ -232,19 +240,12 @@ a{
     font-size: 1rem;
 }
 
-.services div:not(:first-child){
-    padding: 32px 0;
-}
-
-.services .divisor{
-    display: block;
-    height: 1px;
-    width: 90vw;
-    border-bottom: 1px solid rgb(255, 255, 255);
+.service{
+    margin-bottom: 10px;
 }
 
 .contact-box-1 h2{
-    color: #7c00ce;
+    color: #7C00EB;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 26px;
@@ -280,7 +281,7 @@ iframe{
 
 .location-text{
     text-align: left;
-    color: #7c00ce;
+    color: #7C00EB;
     margin-top: 16px;
 }
 
@@ -318,7 +319,7 @@ iframe{
 }
 
 .social-media img:hover{
-    background-color: #7c00ce;
+    background-color: #7C00EB;
 }
 
 form{
@@ -329,7 +330,7 @@ form{
 }
 
 form label{
-    color: #7c00ce;
+    color: #7C00EB;
     font-weight: bold;
 }
 
@@ -337,16 +338,16 @@ form input {
     padding: 2px;
     height: 30px;
     margin-bottom: 16px;
-    border: 1px solid #7c00ce;
+    border: 1px solid #7C00EB;
 }
 
 input:focus {
-    border: 3px solid #7c00ce;
+    border: 3px solid #7C00EB;
     outline: none;
 }
 
 form textarea{
-    border: 1px solid #7c00ce;
+    border: 1px solid #7C00EB;
     margin-bottom: 3px;
     box-sizing: border-box; 
     padding: 2px;
@@ -354,7 +355,7 @@ form textarea{
 }
 
 form textarea:focus{
-    border: 3px solid #7c00ce;
+    border: 3px solid #7C00EB ;
     outline: none;
     box-sizing: border-box; 
 }
@@ -368,7 +369,7 @@ form button{
 }
 
 form button:hover{
-    background-color: #7c00ce;
+    background-color: #7C00EB;
 }
 
 footer{
@@ -380,4 +381,82 @@ footer{
     color: white;
     background: rgb(6, 6, 6);
     height: 6vh;
+}
+
+@media(min-width: 900px){
+    .about{
+        padding: 50px;
+    }
+
+    .about img{
+        min-width: 700px;
+    }
+
+    .contact-box-1{
+        max-width: 500px;
+    }
+
+    .contact-box-2{
+        max-width: 460px;
+    }
+
+    .contact-box-2 form{
+        padding: 10px;
+    }
+
+    .contact{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer{
+        margin-top: 32px;
+    }
+}
+
+@media(min-width: 1280px){
+    .about{
+      padding: 100px;
+      display: flex;  
+      flex-direction: row;
+      justify-content: space-around;
+
+    }
+
+    .about img{
+        min-width: 600px;
+    }
+
+    .about-text{
+        max-width: 600px;
+    }
+
+    .about-text p{
+        min-width: 500px;
+    }
+
+    .imgs-services{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas com largura igual */
+        grid-gap: 20px; /* Espaçamento entre as células */
+        padding: 20px; /* Espaçamento interno para melhor visualização */ 
+    }
+
+    .imgs-services img{
+        max-width: 600px;
+    }
+
+    .contact-box-1{
+        max-width: 760px;
+    }
+
+    .contact-box-2{
+        max-width: 720px;
+    }
+}
+
+.service{
+    box-shadow: inset 0px 0px 5px 1px #8e0ee3;
+    border-radius: 8px;
 }
