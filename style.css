@@ -126,7 +126,7 @@ a{
 
 .about p{
     line-height: 26px;
-    text-align: left;
+    text-align: justify;
 }
 
 .about h2{
@@ -329,15 +329,18 @@ form{
     padding-top: 0;
 }
 
-form label{
+form div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
     color: #7C00EB;
     font-weight: bold;
+    padding: 4px;
 }
 
 form input {
     padding: 2px;
     height: 30px;
-    margin-bottom: 16px;
     border: 1px solid #7C00EB;
 }
 
@@ -362,10 +365,12 @@ form textarea:focus{
 
 form button{
     height: 50px;
+    width: calc(100% - 8px);
     color: white;
     background-color: #651b97;
     cursor: pointer;
     transition: 0.2s;
+    margin-left: 4px;
 }
 
 form button:hover{
@@ -459,4 +464,22 @@ footer{
 .service{
     box-shadow: inset 0px 0px 5px 1px #8e0ee3;
     border-radius: 8px;
+}
+
+
+#menu li{
+    border: 2px solid #e700eb00;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+#menu li:hover{
+    background: #E900EB ;
+    border: 2px solid #fb00ff;
+}
+
+.error{
+    display: none;
+    color: red;
+    font-size: smaller;
 }

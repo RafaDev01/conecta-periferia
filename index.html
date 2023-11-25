@@ -116,28 +116,43 @@
                         <p><span>Email:</span> conectaperiferia@outlook.com</p>
                         <h2>Redes socias</h2>
                         <div>
-                            <a href="https://google.com" target="_blank"><img class="icon-social-media" src="assets/svg/instagram.svg" alt=""></a>
-                            <a href="https://google.com" target="_blank"><img class="icon-social-media" src="assets/svg/outlook.svg" alt="outlook"></a>
+                            <a href="https://www.instagram.com/conecta_periferia/" target="_blank"><img class="icon-social-media" src="assets/svg/instagram.svg" alt="instagram"></a>
+                            <a href="mailto:conectaperiferia@outlook.com"target="_blank"><img class="icon-social-media" src="assets/svg/outlook.svg" alt="outlook"></a>
                         </div>
                     </div>
                 </div>  
             </div>
             <div class="contact-box-2">
                 <form action="/seu-endereco-de-envio" method="post">
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    <div>
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" maxlength="80" required>
+                        <p class="error error-nome">Digite um nome válido.</p>
+                    </div>
                 
-                    <label for="empresa">Empresa:</label>
-                    <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
+                    <div>
+                        <label for="empresa">Empresa:</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" maxlength="50" required>
+                        <p class="error error-empresa">Digite o nome da empresa que voçê representa.</p>
+                    </div>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Email" maxlength="50" required>
+                        <p class="error error-email">Digite um email válido.</p>
+                    </div>
                 
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="(XX)XXXXX-XXXX" required>
+                    <div>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(XX)XXXXX-XXXX" maxlength="11" required>
+                        <p class="error error-telefone">Digite um telefone válido.</p>
+                    </div>
 
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea type="text" id="mensagem" name="mensagem" rows="4" cols="60" placeholder="Digite a mensagem" required></textarea>
+                    <div>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea type="text" id="mensagem" name="mensagem" rows="4" cols="60" placeholder="Digite a mensagem" maxlength="400" required></textarea>
+                        <p class="error error-msg">Por favor, insira uma mensagem válida.</p>
+                    </div>
                     <br>
                     <button type="submit">Enviar</button>
                 </form>

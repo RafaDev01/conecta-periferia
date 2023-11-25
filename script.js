@@ -2,9 +2,11 @@ const header = document.querySelector("#header")
 const btnMobile = document.querySelector('#btn-mobile')
 const elementoMenu = [...document.querySelectorAll('.link-menu')]
 const form = document.querySelector('form')
-const telefoneInput = document.getElementById('telefone');
-
-
+const formNomeInput = document.querySelector('input#nome');
+const formEmailInput = document.querySelector('input#email');
+const formTelefoneInput = document.querySelector('input#telefone');
+const formMensagemInput = document.querySelector('textarea#mensagem');
+const errorForm = [...document.querySelectorAll(".error")]
 
 window.addEventListener('scroll', ()=> {
     const alturaAtual = window.scrollY;
@@ -62,12 +64,91 @@ elementoMenu.forEach(element => {
     });
 });
 
+function contemNumeros(str) {
+    return /\d/.test(str);
+}
+
+const checarFormInputNome = () => {
+    const valorDoInput = formNomeInput.value.trim();
+    const contemNumero = contemNumeros(valorDoInput)
+
+    if (valorDoInput !== "") {
+        if(contemNumero){
+            errorForm[0].style.display = "block";    
+            return 1
+        }else{
+            errorForm[0].style.display = "none";  
+            return 0
+        }
+    } else {
+        errorForm[0].style.display = "block";  
+        return 1  
+    }
+};
+
+const checarFormInputEmail = () =>{
+    const email = formEmailInput.value.trim()
+
+    // Expressão regular para validar o formato do email
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    if(regexEmail.test(email)) {
+        errorForm[2].style.display = "none";  
+        return 0
+    } else {
+        errorForm[2].style.display = "block"; 
+        return 1
+    }
+}
+
+const checarFormInputTelefone = () =>{
+    const telefone = formTelefoneInput.value.trim();
+
+    const regexLetra = /[a-zA-Z]/;
+
+    if (regexLetra.test(telefone)) {
+        return 1
+    } else {
+        if(telefone.length !== 11){
+            errorForm[3].style.display = "block"; 
+            return 1
+        }else{
+            errorForm[3].style.display = "none"; 
+            return 0
+        }
+    }
+}
+
+const checarFormInputMensagem = () =>{
+    const mensagem = formMensagemInput.value;
+
+    // Divide a string em um array de palavras
+    const palavras = mensagem.split(/\s+/);
+
+    // Verifica o comprimento de cada palavra
+    for (let i = 0; i < palavras.length; i++) {
+      if (palavras[i].length > 40) {
+        errorForm[4].style.display = "block";  
+        return 1
+      }else{
+        errorForm[4].style.display = "none";  
+        return 0
+      }
+    }
+}
+
 form.addEventListener('submit',(event)=>{
     event.preventDefault()
-})
-
-if (telefoneInput) {
-        telefoneInput.addEventListener('input', function () {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
+    let errorsForm = 0
+    errorsForm += checarFormInputNome()
+    errorsForm += checarFormInputEmail()
+    errorsForm += checarFormInputTelefone()
+    errorsForm += checarFormInputMensagem()
+ 
+    if(errorsForm > 0){
+        return
+    }else{
+        alert("Formulario enviado com sucesso")
     }
+    console.log(errorsForm)
+})
