@@ -1,13 +1,10 @@
-/*setTimeout(()=>{
-    alert("Estou finalizando a versão de celular, a versão de computador ainda não está pronta")
-},2000)*/
-
-
 const header = document.querySelector("#header")
 const btnMobile = document.querySelector('#btn-mobile')
 const elementoMenu = [...document.querySelectorAll('.link-menu')]
 const form = document.querySelector('form')
 const telefoneInput = document.getElementById('telefone');
+
+
 
 window.addEventListener('scroll', ()=> {
     const alturaAtual = window.scrollY;
@@ -35,6 +32,22 @@ btnMobile.addEventListener("touchstart",(event)=>{
     toggleMenu(event)
 })
 
+const scrollDeAcordoComODispositivo =(targetElement)=>{
+    if (window.innerWidth <= 600) {
+        setTimeout(() => {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }, 800);
+    } else {
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    }           
+}
+
 elementoMenu.forEach(element => {
     element.addEventListener("click", (event) => {
         toggleMenu(event);
@@ -44,13 +57,7 @@ elementoMenu.forEach(element => {
 
         if (targetElement) {
             event.preventDefault();
-
-            setTimeout(() => {
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                });
-            }, 800);
+            scrollDeAcordoComODispositivo(targetElement)
         }
     });
 });
