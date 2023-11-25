@@ -309,9 +309,9 @@ iframe{
 }
 
 .social-media img{
-    padding: 6px;
+    padding: 10px;
     transition: .3s;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 .social-media img{
