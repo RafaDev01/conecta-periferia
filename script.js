@@ -7,6 +7,9 @@ const formEmailInput = document.querySelector('input#email');
 const formTelefoneInput = document.querySelector('input#telefone');
 const formMensagemInput = document.querySelector('textarea#mensagem');
 const errorForm = [...document.querySelectorAll(".error")]
+const formLoading = document.querySelector(".form-loading")
+const formEnviado = document.querySelector(".form-enviado")
+const btnFecharEnvioForm = document.querySelector(".fechar-janela")
 
 window.addEventListener('scroll', ()=> {
     const alturaAtual = window.scrollY;
@@ -137,6 +140,12 @@ const checarFormInputMensagem = () =>{
     }
 }
 
+const fecharJanelaEnvioForm=()=>{
+    btnFecharEnvioForm.addEventListener('click', ()=>{
+        formEnviado.classList.remove("active")
+    })
+}
+
 form.addEventListener('submit',(event)=>{
     event.preventDefault()
     let errorsForm = 0
@@ -148,7 +157,11 @@ form.addEventListener('submit',(event)=>{
     if(errorsForm > 0){
         return
     }else{
-        alert("Formulario enviado com sucesso")
+        formLoading.classList.add("active")
+        setTimeout(()=>{
+            formLoading.classList.remove("active")
+            formEnviado.classList.add("active")
+            fecharJanelaEnvioForm();
+        },2500)
     }
-    console.log(errorsForm)
 })

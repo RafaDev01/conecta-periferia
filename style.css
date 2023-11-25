@@ -45,6 +45,8 @@ a{
     display: flex;
     list-style: none;
     gap: .5rem;
+    position: relative;
+    z-index: 10000;
 }
 
 #menu a{
@@ -461,6 +463,10 @@ footer{
     }
 }
 
+.contact-box-2{
+    position: relative;
+}
+
 .service{
     box-shadow: inset 0px 0px 5px 1px #8e0ee3;
     border-radius: 8px;
@@ -482,4 +488,59 @@ footer{
     display: none;
     color: red;
     font-size: smaller;
+}
+
+.c-loader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #fb00ff;
+    height: 50px;
+    width: 50px;
+  }
+  
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+.form-loading, .form-enviado{
+    background-color: rgba(255, 255, 255, 0.973);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    display: none;
+}
+
+.form-loading.active{
+    display: flex;
+}
+
+.form-enviado.active{
+    display: flex;
+}
+
+.fechar-janela{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-fechar{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-fechar img{
+    cursor: pointer;
 }
