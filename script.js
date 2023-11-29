@@ -162,6 +162,6 @@ form.addEventListener('submit',(event)=>{
             formLoading.classList.remove("active")
             formEnviado.classList.add("active")
             fecharJanelaEnvioForm();
-        },2500)
+        },3500)
     }
 })
